@@ -1,0 +1,87 @@
+{
+  "Experience Educate": {
+    "yearFounded": 2009,
+    "countryBased": "USA",
+    "countryServed": "Uganda, Rwanda, Kenya",
+    "category": "Education",
+    "shortDesc": "Empowering African youth",
+    "mediumDesc": "Prepares African youth for today's economy.",
+    "longDesc": "Partners with governments and communities to introduce employment-focused education and bootcamps, impacting youth in Uganda, Rwanda, and Kenya.",
+    "volunteerStatement": [
+      "Volunteering here has been life-changing.",
+      "I've seen firsthand the positive impact on youth."
+    ],
+    "numberOfMembers": 150,
+    "website": "https://www.experienceeducate.org/",
+    "keyProjects": ["Teacher training programs", "School infrastructure development"],
+    "impactMetrics": ["Number of teachers trained: 500", "Schools impacted: 100"]
+  },
+  "Schools2030": {
+    "yearFounded": 2020,
+    "countryBased": "Global",
+    "countryServed": "10 countries",
+    "category": "Education",
+    "shortDesc": "School-driven innovations",
+    "mediumDesc": "Supports teachers in creating education innovations.",
+    "longDesc": "A ten-year program that empowers teachers and students in 1,000 schools across ten countries to improve holistic learning outcomes through low-cost, scalable innovations.",
+    "volunteerStatement": [
+      "Volunteering here opened my eyes to the potential of grassroots education.",
+      "I've witnessed remarkable teacher and student collaboration."
+    ],
+    "numberOfMembers": 200,
+    "website": "https://schools2030.org/",
+    "keyProjects": ["Community-led education initiatives", "Research on educational practices"],
+    "impactMetrics": ["Number of schools engaged: 200", "Students benefited: 50,000"]
+  },
+  "Room to Read": {
+    "yearFounded": 2000,
+    "countryBased": "USA",
+    "countryServed": "Asia and Africa",
+    "category": "Education",
+    "shortDesc": "Literacy and girls' education",
+    "mediumDesc": "Promotes literacy and girls' education in Asia and Africa.",
+    "longDesc": "Focuses on improving literacy skills and supporting girls' education through various programs and initiatives in low-income communities across Asia and Africa.",
+    "volunteerStatement": [
+      "Volunteering here has been deeply rewarding.",
+      "I am inspired by the children's eagerness to learn."
+    ],
+    "numberOfMembers": 1600,
+    "website": "https://www.roomtoread.org/",
+    "keyProjects": ["Girls' education programs", "Library establishment in rural areas"],
+    "impactMetrics": ["Children benefited: 10 million", "Books distributed: 20 million"]
+  },
+  "Education Outcomes Fund": {
+    "yearFounded": 2018,
+    "countryBased": "UK",
+    "countryServed": "Global",
+    "category": "Education",
+    "shortDesc": "Results-based education funding",
+    "mediumDesc": "Improves learning outcomes by tying funding to measurable results.",
+    "longDesc": "Partners with governments, donors, and investors to enhance education and employment outcomes through results-based financing, aiming to transform the lives of 10 million children and youth.",
+    "volunteerStatement": [
+      "Volunteering here showed me the impact of effective funding.",
+      "I've seen significant improvements in education outcomes."
+    ],
+    "numberOfMembers": 50,
+    "website": "https://www.educationoutcomesfund.org/",
+    "keyProjects": ["Outcome-based financing", "Impact bonds for education"],
+    "impactMetrics": ["Impact bonds issued: 5", "Students reached: 1 million"]
+  },
+  "Humanitix": {
+    "yearFounded": 2016,
+    "countryBased": "Australia",
+    "countryServed": "Global",
+    "category": "Charity",
+    "shortDesc": "Tickets for good causes",
+    "mediumDesc": "Converts ticket fees into charitable donations.",
+    "longDesc": "Humanitix uses 100% of booking fee profits to fund education and other essential services for disadvantaged children worldwide, transforming ticketing into a force for good.",
+    "volunteerStatement": [
+      "Volunteering here made me realize the power of events for change.",
+      "I've seen the direct impact of our contributions to education."
+    ],
+    "numberOfMembers": 80,
+    "website": "https://humanitix.com/au",
+    "keyProjects": ["Funding school programs", "Scholarship support for disadvantaged students"],
+    "impactMetrics": ["Funds raised for education: $1 million", "Events supported: 1000"]
+  }
+}
