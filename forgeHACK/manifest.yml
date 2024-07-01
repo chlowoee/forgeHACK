@@ -1,0 +1,18 @@
+modules:
+  macro:
+    - key: forgehack-hello-world-macro
+      resource: main
+      render: native
+      resolver:
+        function: resolver
+      title: Hackerz!
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: src/frontend/index.jsx
+app:
+  runtime:
+    name: nodejs18.x
+  id: ari:cloud:ecosystem::app/0bbd2494-ecdd-4dfb-9353-07af8a543dcf
