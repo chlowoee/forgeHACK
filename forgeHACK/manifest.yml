@@ -1,11 +1,11 @@
 modules:
-  macro:
-    - key: forgehack-hello-world-macro
+  confluence:homepageFeed:
+    - key: homepage-forge-hello-world-homepage-feed
       resource: main
       render: native
       resolver:
         function: resolver
-      title: Hackerz!
+      title: What's On
   function:
     - key: resolver
       handler: index.handler
@@ -15,4 +15,14 @@ resources:
 app:
   runtime:
     name: nodejs18.x
-  id: ari:cloud:ecosystem::app/0bbd2494-ecdd-4dfb-9353-07af8a543dcf
+  id: ari:cloud:ecosystem::app/63a5ae1c-5d1a-4026-b7b2-101befef9e55
+permissions:
+  scopes:
+    - read:confluence-content.summary
+  external:
+    images:
+      - 'https://www.roomtoread.org/media/l2vhltjx/microsoftteams-image-14.png'
+      - 'https://sevoice.com.au/wp-content/uploads/2020/12/Lucas-Hutchesson--scaled.jpg'
+
+
+
