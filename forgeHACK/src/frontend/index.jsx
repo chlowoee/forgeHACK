@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ForgeReconciler, { Text, Box, Button, UserGroup, User, Strong, Heading, Image, xcss, LinkButton } from '@forge/react';
-import { Modal, ModalBody, ModalTransition, ModalTitle, ModalFooter, ModalHeader, Link, Inline } from '@forge/react';
+import { Modal, ModalBody, ModalTransition, ModalTitle, ModalFooter, ModalHeader, Link, Inline, Stack } from '@forge/react';
 
 const App = () => {
   const [isModalOpen, setModalOpen] = useState(false);
@@ -23,59 +23,114 @@ const App = () => {
 
   return (
     <>
-      {isBoxVisible && (
-        <Box padding="space.200" backgroundColor="color.background.accent.blue.subtlest">
-          <Inline spread='space-between'>
-            <Box>
-              <Text>
-                <Strong>10th July 2024</Strong>
-              </Text>
+      <Stack spread="space-between">
+      <Box>
+        {isBoxVisible && (
+          <Box padding="space.200" backgroundColor="color.background.accent.blue.subtlest">
+            <Inline spread='space-between'>
+              <Box>
+                <Text>
+                  <Strong>10th July 2024</Strong>
+                </Text>
+                <Box paddingBlock="space.50">
+                  <Text fontSize="small">10:00 - 16:30</Text>
+                </Box>
+              </Box>
+              <Image
+                src="https://www.roomtoread.org/media/l2vhltjx/microsoftteams-image-14.png"
+                alt="charity logo"
+                size="xsmall"
+              />
+            </Inline>
+            <Box paddingBlockStart='space.150'>
+              <Heading as="h3">Book Sale Volunteer</Heading>
               <Box paddingBlock="space.50">
-                <Text fontSize="small">10:00 - 16:30</Text>
+                <Text fontSize="medium">Sydney, Australia</Text>
               </Box>
             </Box>
-            <Image
-              src="https://www.roomtoread.org/media/l2vhltjx/microsoftteams-image-14.png"
-              alt="charity logo"
-              size="xsmall"
-            />
-          </Inline>
-          <Box paddingBlockStart='space.150'>
-            <Heading as="h3">Book Sale Volunteer</Heading>
-            <Box paddingBlock="space.50">
-              <Text fontSize="medium">Sydney, Australia</Text>
+            <Box paddingBlock="space.200" display="inline-flex" alignItems="center">
+              {isNotGoingVisible ? (
+                <Button appearance="primary" onClick={handleGoingClick}>Going</Button>
+              ) : (
+                <Button appearance="warning" onClick={handleGoingClick}>Going</Button>
+              )}
+              {isNotGoingVisible && (
+                <Button onClick={handleNotGoingClick}>
+                  Not Going
+                </Button>
+              )}
+            </Box>
+            <Box>
+              <UserGroup>
+                {Array.from({ length: userCount }, (_, index) => (
+                  <User key={index} accountId={`user-${index}`} />
+                ))}
+              </UserGroup>
+            </Box>
+            <Box
+              backgroundColor="color.background.discovery"
+            >
+              {isLinkVisible && (
+                <LinkButton spacing="none" appearance="link" onClick={handleOpenModal}>
+                  Learn more
+                </LinkButton>
+              )}
             </Box>
           </Box>
-          <Box paddingBlock="space.200" display="inline-flex" alignItems="center">
-            {isNotGoingVisible ? (
-              <Button appearance="primary" onClick={handleGoingClick}>Going</Button>
-            ) : (
-              <Button appearance="warning" onClick={handleGoingClick}>Going</Button>
-            )}
-            {isNotGoingVisible && (
-              <Button onClick={handleNotGoingClick}>
-                Not Going
-              </Button>
-            )}
-          </Box>
+        )}
+      </Box>
+      <Box padding="space.200" backgroundColor="color.background.accent.blue.subtler">
+        <Inline spread='space-between'>
           <Box>
-            <UserGroup>
-              {Array.from({ length: userCount }, (_, index) => (
-                <User key={index} accountId={`user-${index}`} />
-              ))}
-            </UserGroup>
+            <Text>
+              <Strong>10th July 2024</Strong>
+            </Text>
+            <Box paddingBlock="space.50">
+              <Text fontSize="small">10:00 - 16:30</Text>
+            </Box>
           </Box>
-          <Box
-            backgroundColor="color.background.discovery"
-          >
-            {isLinkVisible && (
-              <LinkButton spacing="none" appearance="link" onClick={handleOpenModal}>
-                Learn more
-              </LinkButton>
-            )}
+          <Image
+            src="https://www.roomtoread.org/media/l2vhltjx/microsoftteams-image-14.png"
+            alt="charity logo"
+            size="xsmall"
+          />
+        </Inline>
+        <Box paddingBlockStart='space.150'>
+          <Heading as="h3">Next Box</Heading>
+          <Box paddingBlock="space.50">
+            <Text fontSize="medium">Sydney, Australia</Text>
           </Box>
         </Box>
-      )}
+        <Box paddingBlock="space.200" display="inline-flex" alignItems="center">
+          {isNotGoingVisible ? (
+            <Button appearance="primary" onClick={handleGoingClick}>Going</Button>
+          ) : (
+            <Button appearance="warning" onClick={handleGoingClick}>Going</Button>
+          )}
+          {isNotGoingVisible && (
+            <Button onClick={handleNotGoingClick}>
+              Not Going
+            </Button>
+          )}
+        </Box>
+        <Box>
+          <UserGroup>
+            {Array.from({ length: userCount }, (_, index) => (
+              <User key={index} accountId={`user-${index}`} />
+            ))}
+          </UserGroup>
+        </Box>
+        <Box
+          backgroundColor="color.background.discovery"
+        >
+          {isLinkVisible && (
+            <LinkButton spacing="none" appearance="link" onClick={handleOpenModal}>
+              Learn more
+            </LinkButton>
+          )}
+        </Box>
+      </Box>
+      </Stack>
       <ModalTransition>
         {isModalOpen && (
           <Modal onClose={handleCloseModal}>
