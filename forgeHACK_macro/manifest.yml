@@ -1,0 +1,28 @@
+modules:
+  macro:
+    - key: forgehack-hello-world-macro
+      resource: main
+      render: native
+      resolver:
+        function: resolver
+      title: Phil Info
+      config: true
+
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: src/frontend/index.jsx
+app:
+  runtime:
+    name: nodejs18.x
+  id: ari:cloud:ecosystem::app/0bbd2494-ecdd-4dfb-9353-07af8a543dcf
+permissions:
+  external:
+    images:
+      - 'https://images.squarespace-cdn.com/content/520111afe4b0748af59ffc18/1526951076845-92PA6EF98MX89HJYB9EY/Educate-logo-box.jpg?format=1500w&content-type=image%2Fjpeg'
+      - "https://wac-cdn.atlassian.com/dam/jcr:e9a1d9e4-d469-492f-b429-bae28003b1d2/Schools-2030-logo.svg?cdnVersion=1794"
+      - "https://static.ethicaljobs.com.au/media/1630979567_oVrxE_.png"
+      - "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpuBOBxsfbtGImi9gpkSnSORtkr1gdObhWTw&s"
+      - "https://upload.wikimedia.org/wikipedia/commons/0/0b/Humanitix_logo_without_wordmark.png"
